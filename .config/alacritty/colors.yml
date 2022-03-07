@@ -1,0 +1,27 @@
+# BEGIN ACE
+colors:
+  primary:
+    background: '#120412'
+    foreground: '#f4db9d'
+  cursor:
+    text:       '#120412'
+    cursor:     '#f4db9d'
+  normal:
+    black:      '#120412'
+    red:        '#704E48'
+    green:      '#B44B50'
+    yellow:     '#FC7056'
+    blue:       '#F95E62'
+    magenta:    '#FC8D51'
+    cyan:       '#FCA05F'
+    white:      '#f4db9d'
+  bright:
+    black:      '#aa996d'
+    red:        '#704E48'
+    green:      '#B44B50'
+    yellow:     '#FC7056'
+    blue:       '#F95E62'
+    magenta:    '#FC8D51'
+    cyan:       '#FCA05F'
+    white:      '#f4db9d'
+# END ACE

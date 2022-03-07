@@ -1,0 +1,1 @@
+*/1 * * * * psuedo /home/psuedo/scripts/battery.sh
