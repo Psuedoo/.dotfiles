@@ -206,7 +206,9 @@ for_window [class=".*"] border pixel 1
 # Set color scheme
 # exec_always --no-startup-id $HOME/scripts/set-theme.sh
 
-bindsym $mod+s exec scrot $HOME/Screenshot/screenshot.jpg
+# bindsym $mod+s exec scrot $HOME/Screenshot/screenshot.jpg
+# bindsym $mod+s exec scrot -w '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f && rm $f'
+bindsym $mod+s exec scrot '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'
 
 # Adjusting backlight
 bindsym $mod+m exec xbacklight -inc 10 
