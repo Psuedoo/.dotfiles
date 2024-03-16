@@ -3,6 +3,7 @@ require("conform").setup({
     lua = { "stylua" },
     python = { "isort", "black" },
     yaml = { "prettier" },
+    typescript = { "prettier", "eslint-lsp" },
   },
   format_on_save = {
     timeout_ms = 500,

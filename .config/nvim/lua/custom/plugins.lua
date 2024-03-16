@@ -13,7 +13,9 @@ local plugins = {
       ensure_installed = {
         "pyright",
         "black",
-        "isort"
+        "isort",
+        "prettier",
+        "eslint-lsp"
       },
     },
   },
