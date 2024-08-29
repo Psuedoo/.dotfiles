@@ -1,9 +1,9 @@
-from libqtile import bar
-from .widgets import *
-from libqtile.config import Screen
-
 import os
 
+from libqtile import bar
+from libqtile.config import Screen
+
+from .widgets import *
 
 screens = [
     Screen(
@@ -54,7 +54,7 @@ screens = [
                     background="#353446",
                     foreground="#E5B9C6",
                     fmt="{}",
-                    font="JetBrains Mono Bold",
+                    font="Ubuntu Mono Bold",
                     fontsize=13,
                 ),
                 widget.Image(
@@ -69,7 +69,7 @@ screens = [
                 # widget.TextBox(
                 #     fmt='Search',
                 #     background='#282738',
-                #     font="JetBrains Mono Bold",
+                #     font="Ubuntu Mono Bold",
                 #     fontsize=13,
                 #     foreground='#E5B9C6',
                 #     mouse_callbacks={"Button1": search},
@@ -80,7 +80,7 @@ screens = [
                 widget.WindowName(
                     background="#353446",
                     format="{name}",
-                    font="JetBrains Mono Bold",
+                    font="Ubuntu Mono Bold",
                     fontsize=13,
                     foreground="#E5B9C6",
                     empty_group_string="Desktop",
@@ -108,7 +108,7 @@ screens = [
                 # format=' {up}   {down} ',
                 # background='#353446',
                 # foreground='#E5B9C6',
-                # font="JetBrains Mono Bold",
+                # font="Ubuntu Mono Bold",
                 # prefix='k',
                 # ),
                 # widget.Image(
@@ -130,7 +130,7 @@ screens = [
                     background="#353446",
                     format="{MemUsed: .0f}{mm}",
                     foreground="#E5B9C6",
-                    font="JetBrains Mono Bold",
+                    font="Ubuntu Mono Bold",
                     fontsize=13,
                     update_interval=5,
                 ),
@@ -147,24 +147,25 @@ screens = [
                 # widget.Image(
                 #     filename='~/.config/qtile/Assets/2.png',
                 # ),
-                # widget.Spacer(
-                #     length=8,
-                #     background='#353446',
-                # ),
-                # widget.Battery(format=' {percent:2.0%}',
-                # font="JetBrains Mono ExtraBold",
-                # fontsize=12,
-                # padding=10,
-                # background='#353446',
-                # ),
+                widget.Spacer(
+                    length=8,
+                    background="#353446",
+                ),
+                widget.Battery(
+                    format=" {percent:2.0%}",
+                    font="Ubuntu Mono ExtraBold",
+                    fontsize=12,
+                    padding=10,
+                    background="#353446",
+                ),
                 # widget.Memory(format='﬙{MemUsed: .0f}{mm}',
-                # font="JetBrains Mono Bold",
+                # font="Ubuntu Mono Bold",
                 # fontsize=12,
                 # padding=10,
                 # background='#4B4D66',
                 # ),
                 # widget.Volume(
-                #     font="JetBrains Mono Bold",
+                #     font="Ubuntu Mono Bold",
                 #     fontsize=13,
                 #     theme_path='~/.config/qtile/Assets/Volume/',
                 #     emoji=True,
@@ -175,7 +176,7 @@ screens = [
                 #     background='#353446',
                 #     ),
                 # widget.Volume(
-                #     font="JetBrains Mono Bold",
+                #     font="Ubuntu Mono Bold",
                 #     fontsize=13,
                 #     background='#353446',
                 #     foreground='#E5B9C6',
@@ -194,7 +195,7 @@ screens = [
                     format="%I:%M %p",
                     background="#282738",
                     foreground="#E5B9C6",
-                    font="JetBrains Mono Bold",
+                    font="Ubuntu Mono Bold",
                     fontsize=13,
                 ),
                 widget.Spacer(
