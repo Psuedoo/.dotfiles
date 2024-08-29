@@ -9,7 +9,7 @@ To set up a new machine to use your version controlled config files, all you nee
 git clone --separate-git-dir=$HOME/.dotfiles git@github.com:Psuedoo/.dotfiles.git ~
 ```
 
-However, some programs create default config files, so this might fail if git finds an existing config file in your $HOME. In that case, a simple solution is to clone to a temporary directory, and then delete it once you are done:
+However, some programs create default config files, so this might fail if git finds an existing config file in your `$HOME`. In that case, a simple solution is to clone to a temporary directory, and then delete it once you are done:
 
 ```bash
 git clone --separate-git-dir=$HOME/.dotfiles git@github.com:Psuedoo/.dotfiles.git tmpdotfiles
