@@ -117,7 +117,6 @@ alias vi="nvim"
 export EDITOR="nvim"
 export VISUAL="nvim"
 
-wal -q -b 282738 -i ~/.config/Wallpaper/120_-_KnFPX73.jpg
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 export NVM_DIR="$HOME/.nvm"

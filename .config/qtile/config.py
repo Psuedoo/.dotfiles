@@ -1,9 +1,10 @@
-from libqtile import bar, layout, qtile, widget, hook
+from libqtile import bar, hook, layout, qtile, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
-from modules.layouts import layouts, floating_layout
 from libqtile.lazy import lazy
-from modules.screens import *
+
 from modules.keys import *
+from modules.layouts import floating_layout, layouts
+from modules.screens import *
 
 mod = "mod4"
 terminal = "alacritty"
@@ -84,8 +85,10 @@ wmname = "LG3D"
 
 import os
 import subprocess
+
+
 # stuff
 @hook.subscribe.startup_once
 def autostart():
     home = os.path.expanduser("~")
-    subprocess.Popen([home + os.path.expanduser('/.config/qtile/autostart_once.sh')])
+    subprocess.Popen([home + os.path.expanduser("/.config/qtile/autostart.sh")])
