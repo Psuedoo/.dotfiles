@@ -1,4 +1,5 @@
 from libqtile.config import Key
+
 from .mouse import *
 
 mod = "mod4"
@@ -72,4 +73,11 @@ keys = [
     ),
     Key([mod], "s", lazy.spawn("flameshot gui"), desc="Screenshot"),
     Key([mod], "e", lazy.spawn("thunar"), desc="file manager"),
+    Key([mod], "g", lazy.spawn("firefox"), desc="firefox browser"),
+    Key(
+        [mod],
+        "n",
+        lazy.spawn("firefox 'https://discord.com/channels/@me'"),
+        desc="discord in browser",
+    ),
 ]
