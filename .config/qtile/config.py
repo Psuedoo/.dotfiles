@@ -1,5 +1,5 @@
 from libqtile import bar, hook, layout, qtile, widget
-from libqtile.config import Click, Drag, Group, Key, Match, Screen
+from libqtile.config import Click, Drag, DropDown, Group, Key, Match, ScratchPad, Screen
 from libqtile.lazy import lazy
 
 from modules.keys import *
@@ -23,7 +23,21 @@ for vt in range(1, 8):
     )
 
 
-groups = [Group(i) for i in "123456789"]
+# groups = [Group(i) for i in "12345678"]
+groups = [
+    ScratchPad(
+        "p",
+        [
+            DropDown(
+                "Term", "alacritty", opacity=1, height=0.5, on_focus_lost_hide=False
+            ),
+        ],
+    ),
+    Group("1", label="DEV"),
+    Group("2", label="WWW"),
+    Group("3", label="SYS"),
+    Group("4", label="NOTE"),
+]
 
 for i in groups:
     keys.extend(
@@ -42,6 +56,7 @@ for i in groups:
                 lazy.window.togroup(i.name, switch_group=True),
                 desc="Switch to & move focused window to group {}".format(i.name),
             ),
+            Key([mod], "a", lazy.group["p"].dropdown_toggle("Term")),
             # Or, use below if you prefer not to switch to that group.
             # # mod + shift + group number = move focused window to group
             # Key([mod, "shift"], i.name, lazy.window.togroup(i.name),
