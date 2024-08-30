@@ -118,6 +118,11 @@ screens = [
                 # length=8,
                 # background='#353446',
                 # ),
+                widget.Backlight(
+                    backlight_name="intel_backlight",
+                    brightness_file="/sys/class/backlight/intel_backlight/brightness",
+                    max_brightness_file="/sys/class/backlight/intel_backlight/max_brightness",
+                ),
                 widget.Image(
                     filename="~/.config/qtile/Assets/Misc/ram.png",
                     background="#353446",

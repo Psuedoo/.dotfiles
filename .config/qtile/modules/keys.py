@@ -4,6 +4,8 @@ from .mouse import *
 
 mod = "mod4"
 terminal = "alacritty"
+brightness_up = "brightnessctl s 10%+"
+brightness_down = "brightnessctl s 10%-"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -79,5 +81,14 @@ keys = [
         "n",
         lazy.spawn("firefox 'https://discord.com/channels/@me'"),
         desc="discord in browser",
+    ),
+    Key(
+        [], "XF86MonBrightnessUp", lazy.spawn(brightness_up), desc="Turns brightness up"
+    ),
+    Key(
+        [],
+        "XF86MonBrightnessDown",
+        lazy.spawn(brightness_down),
+        desc="Turns brightness down",
     ),
 ]
