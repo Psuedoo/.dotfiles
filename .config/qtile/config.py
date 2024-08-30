@@ -1,3 +1,6 @@
+import os
+import subprocess
+
 from libqtile import bar, hook, layout, qtile, widget
 from libqtile.config import Click, Drag, DropDown, Group, Key, Match, ScratchPad, Screen
 from libqtile.lazy import lazy
@@ -87,6 +90,13 @@ wl_input_rules = None
 wl_xcursor_theme = None
 wl_xcursor_size = 24
 
+
+@hook.subscribe.startup_once
+def autostart():
+    home = os.path.expanduser("~")
+    subprocess.Popen([home + os.path.expanduser("/.config/qtile/autostart.sh")])
+
+
 # XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
 # string besides java UI toolkits; you can see several discussions on the
 # mailing lists, GitHub issues, and other WM documentation that suggest setting
@@ -96,14 +106,3 @@ wl_xcursor_size = 24
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
 wmname = "LG3D"
-
-
-import os
-import subprocess
-
-
-# stuff
-@hook.subscribe.startup_once
-def autostart():
-    home = os.path.expanduser("~")
-    subprocess.Popen([home + os.path.expanduser("/.config/qtile/autostart.sh")])
